@@ -9,5 +9,6 @@
 library constants;
 
 export 'src/date_time_constants.dart';
+export 'src/date_time_primitives.dart';
 export 'src/integer_constants.dart';
 

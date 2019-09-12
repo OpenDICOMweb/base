@@ -6,8 +6,6 @@
 //  Primary Author: Jim Philbin <jfphilbin@gmail.edu>
 //  See the AUTHORS file for other contributors.
 //
-library constants;
+import 'package:constants/src/date_time_constants.dart';
 
-export 'src/date_time_constants.dart';
-export 'src/integer_constants.dart';
-
+// ignore_for_file: public_member_api_docs

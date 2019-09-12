@@ -21,13 +21,13 @@ import 'package:constants/src/integer.dart';
 const int kDefaultMinYear = 1900;
 const int kDefaultMaxYear = 2050;
 
-const int kInvalidEpochMicroseconds = kMin64BitInt;
+const int kInvalidEpochMicroseconds = kInt64Min;
 
 // These are the upper and lower bounds for Epoch microseconds for the system.
 // [kMin64BitInt] is the error values for Dates and Times.
-const int kEpochMicrosecondsErrorValue = kMin64BitInt;
-const int kAbsoluteMinEpochMicroseconds = kMin64BitInt + 1;
-const int kAbsoluteMaxEpochMicroseconds = kMax64BitInt;
+const int kEpochMicrosecondsErrorValue = kInt64Min;
+const int kAbsoluteMinEpochMicroseconds = kInt64Min + 1;
+const int kAbsoluteMaxEpochMicroseconds = kInt64Max;
 const int kAbsoluteMinEpochMicrosecondsUTC =
     kAbsoluteMinEpochMicroseconds + kMinTimeZoneMicroseconds;
 const int kAbsoluteMaxEpochMicrosecondsUTC =
@@ -39,7 +39,6 @@ const int kAbsoluteMinEpochDay = -53375995;
 const int kAbsoluteMaxEpochDay = 52656527;
 const int kEpochDayZero = 0;
 const int kEpochDayZeroInMicroseconds = 0;
-//const EpochDate kEpochDateZero = 0;
 const int kEpochDayZeroWeekday = kThursday;
 
 // The number of days between 0000-03-01 (March 1, 0000) and

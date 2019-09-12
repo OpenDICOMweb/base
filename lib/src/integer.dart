@@ -9,8 +9,9 @@
 
 // ignore_for_file: public_member_api_docs
 
-const int kMin64BitInt = 0x8000000000000000;
-const int kMax64BitInt = 0x7FFFFFFFFFFFFFFF;
+// Urgent delete
+//const int kMin64BitInt = 0x8000000000000000;
+//const int kMax64BitInt = 0x7FFFFFFFFFFFFFFF;
 
 /// The minimum values of a signed 8-bit integer.
 const int kInt8Min = -(1 << (8 - 1));
@@ -31,10 +32,10 @@ const int kInt32Min = -(1 << (32 - 1));
 const int kInt32Max = (1 << (32 - 1)) - 1;
 
 /// The minimum values of an unboxed, signed 64-bit integer.
-const int kInt64Min = kMin64BitInt;
+const int kInt64Min = -0x8000000000000000;
 
 /// The maximum values of an unboxed, signed 64-bit integer.
-const int kInt64Max = kMax64BitInt;
+const int kInt64Max = 0x7FFFFFFFFFFFFFFF;
 
 /// The minimum values of a unsigned 16-bit integer.
 const int kUint8Min = 0;
@@ -58,7 +59,7 @@ const int kUint32Max = 0xFFFFFFFF;
 const int kUint64Min = 0;
 
 /// The maximum values of an unboxed, unsigned 64-bit integer (2^32).
-const int kUint64Max = kMax64BitInt;
+const int kUint64Max = kInt64Max;
 
 // TODO: eventually remove these
 /// The minimum integer values, in Dart, that can be stored without boxing.
@@ -71,6 +72,7 @@ const int kUint64Max = kMax64BitInt;
 /// without boxing.
 //const int kDartMaxSMUint = 0x3FFFFFFFFFFFFFFF;
 
+/* Urgent Decide if we should have primitive functions
 /// Return [value], if it satisfies [min] <= [value] <= [max];
 /// otherwise, throws a [RangeError].
 int checkRange(int value, int min, int max, {bool throwOnError = false}) {
@@ -81,7 +83,6 @@ int checkRange(int value, int min, int max, {bool throwOnError = false}) {
   }
   return value;
 }
-/*
 
 /// Returns _true_ if [s] is a valid unsigned integer [String].
 bool isValidUintString(String s,

@@ -161,7 +161,7 @@ class Epoch {
 //   - nm: normalized month number - March is 1
   static int dateToDay(int y, int m, int d) {
     const _zeroCEDay = -719468; // The zero day of the Christian Ero (CE).
-    const _daysInEra = 146097;  // The number of days in an Era.
+    const _daysInEra = 146097; // The number of days in an Era.
 
     final ny = (m <= 2) ? y - 1 : y;
     final era = (ny >= 0 ? ny : ny - 399) ~/ 400;
@@ -221,11 +221,53 @@ class Epoch {
     return weekday > 0 ? weekday - 1 : 6;
   }
 
-  /// Returns a [String] in the format yyyymmdd.
-  String microsecondToDateString(int us, {bool asDicom = true}) {
-    if (isNotValidMicroseconds(us)) return null;
-    final day = us ~/ kMicrosecondsPerDay;
-    return dayToString(day, asDicom: asDicom);
+  /// Returns a [String] corresponding to the date of [us], where [us] is an
+  /// Epoch microsecond. If [asDicom] is _true_ the returned [String]
+  /// has the DICOM format (_yyyymmdd_); otherwise, it has the
+  /// Internet format (_yyyy-mm-dd_).
+  /// Returns _Null_ if [us] is _NOT_ a microsecond in _this_ Epoch;
+  String microsecondToDateString(int us, {bool asDicom = true}) =>
+      isValidMicroseconds(us)
+          ? dayToString(us ~/ kMicrosecondsPerDay, asDicom: asDicom)
+          : null;
+
+  /// Returns _true_ if [us] is a valid Epoch microsecond.
+  bool isValidTimeMicroseconds(int us) => us >= 0 && us <= kMicrosecondsPerDay;
+
+  /// Returns _true_ if [us] is _NOT_ a valid Epoch microsecond.
+  bool isNotValidTimeMicroseconds(int us) => !isValidTimeMicroseconds(us);
+
+  /// Returns a [String] corresponding to the time of [us] if valid;
+  /// otherwise _null_.
+  String microsecondToTimeString(int us, {bool asDicom = true}) =>
+      isValidMicroseconds(us) ? timeToString(us % kMicrosecondsPerDay) : null;
+
+  /// Returns a [String] corresponding to the [time] if valid;
+  /// otherwise _null_. [time] must be in the
+  /// range 0 <= [time] < [kMicrosecondsPerDay].  If [asDicom]
+  /// is _true_ the format is 'hhmmss.ffffff'; otherwise the format is
+  /// 'hh:mm:ss.ffffff'. If [us] [isNotValidTimeMicroseconds] returns _null_.
+  String timeToString(int time, {bool asDicom = true}) {
+    if (isNotValidTimeMicroseconds(time)) return null;
+    final h = _digits2(time ~/ kMicrosecondsPerHour);
+    final m = _digits2((time ~/ kMicrosecondsPerMinute) % kMicrosecondsPerHour);
+    final s =
+        _digits2((time ~/ kMicrosecondsPerSecond) % kMicrosecondsPerMinute);
+    final ms = _digits3(
+        (time ~/ kMicrosecondsPerMillisecond) % kMicrosecondsPerSecond);
+    final us =
+        _digits3((time ~/ kMicrosecondsPerHour) % kMicrosecondsPerMillisecond);
+    return asDicom ? '$h$m$s.$ms$us' : '$h:$m:$s.$ms$us';
+  }
+
+  /// Returns a [String] corresponding to the DICOM DateTime if [us]
+  /// valid for _this_ Epoch; otherwise _null_.   If [asDicom]
+  /// is _true_ the format is 'hhmmss.ffffff'; otherwise the format is
+  /// 'hh:mm:ss.ffffff'. If [us] [isNotValidTimeMicroseconds] returns _null_.
+  String microsecondToDateTimeString(int us, {bool asDicom = true}) {
+    final date = microsecondToDateString(us, asDicom: asDicom);
+    final time = microsecondToTimeString(us, asDicom: asDicom);
+    return asDicom ? '$date$time' : '${date}T$time';
   }
 
   /// Returns a [String] corresponding to _this_. If [asDicom] is _true_
@@ -245,6 +287,14 @@ class Epoch {
     if (n >= 100) return '0$n';
     if (n >= 10) return '00$n';
     return '000$n';
+  }
+
+  /// Returns a 4 digit [String], left padded with '0' if necessary.
+  static String _digits3(int n) {
+    if (n > 999) return null;
+    if (n >= 100) return '$n';
+    if (n >= 10) return '0$n';
+    return '00$n';
   }
 
   /// Returns a 2 digit [String], left padded with '0' if necessary.

@@ -8,7 +8,15 @@
 //
 library constants;
 
-export 'src/date_time_constants.dart';
-export 'src/epoch.dart';
-export 'src/integer_constants.dart';
+export 'src/date_time/date_time_constants.dart';
+export 'src/date_time/date_time_primitives.dart';
+export 'src/date_time/epoch.dart';
+export 'src/dicom/constants.dart';
+export 'src/dicom/vr_base.dart';
+export 'src/dicom/string_primitives.dart';
+export 'src/integer/decimal.dart';
+export 'src/integer/hexadecimal.dart';
+export 'src/integer/integer_constants.dart';
+export 'src/integer/integer_primitives.dart';
+export 'src/string/string_primitives.dart';
 

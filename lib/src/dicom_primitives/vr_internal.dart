@@ -6,8 +6,8 @@
 //  Primary Author: Jim Philbin <jfphilbin@gmail.edu>
 //  See the AUTHORS file for other contributors.
 //
-import 'package:constants/src/dicom/vr_base.dart';
-import 'package:constants/src/dicom/vr_errors.dart';
+import 'package:constants/src/dicom_primitives/vr_base.dart';
+import 'package:constants/src/dicom_primitives/vr_errors.dart';
 
 // ignore_for_file: Type_annotate_public_apis
 

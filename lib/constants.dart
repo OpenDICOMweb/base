@@ -16,7 +16,6 @@ export 'src/dicom_primitives/constants.dart';
 export 'src/dicom_primitives/string.dart';
 export 'src/dicom_primitives/vr_base.dart';
 export 'src/dicom_primitives/vr_errors.dart';
-export 'src/dicom_primitives/vr_internal.dart';
 export 'src/integer/decimal.dart';
 export 'src/integer/hexadecimal.dart';
 export 'src/integer/integer_constants.dart';

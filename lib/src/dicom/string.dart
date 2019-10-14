@@ -3,7 +3,7 @@
 // that can be found in the LICENSE file.
 // See the AUTHORS file for contributors.
 //
-import 'package:constants/src/integer/hexadecimal.dart';
+import 'package:base/src/integer/hexadecimal.dart';
 
 
 /// Returns a [String] in DICOM Tag Code format, e.g. (gggg,eeee),

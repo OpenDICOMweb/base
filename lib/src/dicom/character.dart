@@ -7,7 +7,7 @@
 //  See the AUTHORS file for other contributors.
 //
 import 'package:charcode/ascii.dart';
-import 'package:constants/src/string_primitives/ascii.dart';
+import 'package:base/src/string_primitives/ascii.dart';
 
 // Urgent: is this file used?
 

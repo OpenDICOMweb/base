@@ -8,7 +8,7 @@ Created from templates made available by Stagehand under a BSD-style
 A simple usage example:
 
 ```dart
-import 'package:constants/constants.dart';
+import 'base.dart';
 
 main() {
   var awesome = new Awesome();

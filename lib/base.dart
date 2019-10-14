@@ -10,16 +10,16 @@ library base;
 
 export 'src/date_time/constants.dart';
 export 'src/date_time/epoch.dart';
-export 'src/dicom_primitives/character.dart';
-export 'src/dicom_primitives/constants.dart';
-export 'src/dicom_primitives/string.dart';
-export 'src/dicom_primitives/vr_base.dart';
-export 'src/dicom_primitives/vr_errors.dart';
+export 'src/dicom/character.dart';
+export 'src/dicom/constants.dart';
+export 'src/dicom/string.dart';
+export 'src/dicom/vr_base.dart';
+export 'src/dicom/vr_errors.dart';
+export 'src/integer/constants.dart';
 export 'src/integer/decimal.dart';
 export 'src/integer/hexadecimal.dart';
-export 'src/integer/constants.dart';
 export 'src/integer/integer.dart';
 export 'src/primitives.dart';
-export 'src/string_primitives/ascii.dart';
+export 'src/string/ascii.dart';
 
 

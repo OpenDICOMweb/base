@@ -8,7 +8,7 @@
 //
 import 'dart:io';
 import 'package:base/src/integer/hexadecimal.dart';
-import 'package:base/src/dicom_primitives/vr_base.dart';
+import 'package:base/src/dicom/vr_base.dart';
 
 // ignore_for_file: public_member_api_docs
 // ignore_for_file: prefer_void_to_null

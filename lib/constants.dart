@@ -11,12 +11,17 @@ library constants;
 export 'src/date_time/date_time_constants.dart';
 export 'src/date_time/date_time_primitives.dart';
 export 'src/date_time/epoch.dart';
-export 'src/dicom/constants.dart';
-export 'src/dicom/vr_base.dart';
-export 'src/dicom/string_primitives.dart';
+export 'src/dicom_primitives/character.dart';
+export 'src/dicom_primitives/constants.dart';
+export 'src/dicom_primitives/string.dart';
+export 'src/dicom_primitives/vr_base.dart';
+export 'src/dicom_primitives/vr_errors.dart';
+export 'src/dicom_primitives/vr_internal.dart';
 export 'src/integer/decimal.dart';
 export 'src/integer/hexadecimal.dart';
 export 'src/integer/integer_constants.dart';
 export 'src/integer/integer_primitives.dart';
-export 'src/string/string_primitives.dart';
+export 'src/primitives.dart';
+export 'src/string_primitives/ascii.dart';
+
 

@@ -6,7 +6,7 @@
 //  Primary Author: Jim Philbin <jfphilbin@gmail.edu>
 //  See the AUTHORS file for other contributors.
 //
-import 'package:base/src/dicom/constants.dart';
+import 'package:base/base.dart';
 
 // ignore_for_file: type_annotate_public_apis, public_member_api_docs
 

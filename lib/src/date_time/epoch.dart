@@ -6,7 +6,7 @@
 //  Primary Author: Jim Philbin <jfphilbin@gmail.edu>
 //  See the AUTHORS file for other contributors.
 //
-import 'package:base/src/date_time/constants.dart';
+import 'package:base/base.dart';
 
 // Urgent: convert this to use DataTime rather than EpochDate
 // Urgent: move test code from core

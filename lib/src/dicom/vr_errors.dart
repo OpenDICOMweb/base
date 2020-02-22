@@ -7,8 +7,7 @@
 //  See the AUTHORS file for other contributors.
 //
 import 'dart:io';
-import 'package:base/src/integer/hexadecimal.dart';
-import 'package:base/src/dicom/vr_base.dart';
+import 'package:base/base.dart';
 
 // ignore_for_file: public_member_api_docs
 // ignore_for_file: prefer_void_to_null

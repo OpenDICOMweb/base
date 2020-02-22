@@ -3,8 +3,7 @@
 // that can be found in the LICENSE file.
 // See the AUTHORS file for contributors.
 //
-import 'package:base/src/integer/hexadecimal.dart';
-
+import 'package:base/base.dart';
 
 /// Returns a [String] in DICOM Tag Code format, e.g. (gggg,eeee),
 /// corresponding to the Tag [code].

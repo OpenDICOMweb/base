@@ -9,10 +9,6 @@ environment:
 
 dependencies:
   charcode: any
-  base:
-    path: C:/odw/sdk/base
-    version: ^0.7.6
-#  path: ^1.6.0
 
 dev_dependencies:
   test: ^1.6.0

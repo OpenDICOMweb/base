@@ -6,7 +6,7 @@
 //  Primary Author: Jim Philbin <jfphilbin@gmail.edu>
 //  See the AUTHORS file for other contributors.
 //
-import 'package:base/base.dart';
+import 'package:constants/src/integer/constants.dart';
 
 // ignore_for_file: public_member_api_docs
 

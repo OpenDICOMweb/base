@@ -84,24 +84,3 @@ String dec32(int n) {
   assert(n >= -0x8FFFFFFF && n <= 0x8FFFFFFF);
   return dec(n, maxLength: 10);
 }
-
-/// Returns a [String] that approximately corresponds to [v],
-/// that has at most 16 characters.
-String floatToString(double v) {
-  const precision = 10;
-  var s = v.toString();
-  if (s.length > 16) {
-    for (var i = precision; i > 0; i--) {
-      s = v.toStringAsPrecision(i);
-      if (s.length <= 16) break;
-    }
-  }
-  assert(s.length <= 16, '"$s" exceeds max DS length of 16');
-  return s;
-}
-
-/// Returns a [String] that approximately corresponds to [v],
-String numToString(num v) {
-  assert(v is double || v is int);
-  return (v is double) ? floatToString(v) : dec32(v);
-}

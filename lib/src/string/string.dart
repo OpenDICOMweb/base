@@ -7,14 +7,12 @@
 //  See the AUTHORS file for other contributors.
 //
 
-/// Return [value], if it satisfies [min] <= [value] <= [max];
-/// otherwise, throws a [RangeError].
-int checkRange(int value, int min, int max, {bool throwOnError = false}) {
-  if (value < min || value > max) {
-    return throwOnError
-        ? throw RangeError('$value is not in range $min to $max')
-        : null;
-  }
-  return value;
-}
+// ignore_for_file: public_member_api_docs
+
+/// Empty [String] [List]
+final List<String> kEmptyStringList = <String>[];
+
+
+
+
 

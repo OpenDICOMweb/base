@@ -6,8 +6,7 @@
 //  Primary Author: Jim Philbin <jfphilbin@gmail.edu>
 //  See the AUTHORS file for other contributors.
 //
-import 'package:constants/src/number/integer/decimal.dart';
-import 'package:constants/src/number/float.dart';
+import 'package:constants/constants.dart';
 
 //Note: the following do NO error checking.
 

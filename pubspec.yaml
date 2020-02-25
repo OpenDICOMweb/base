@@ -1,7 +1,7 @@
 name: constants
 description: Common constant values used by many ODW packages
 version: 0.7.6
-homepage: https://github.com/OpenDICOMweb/base
+homepage: https://github.com/OpenDICOMweb/constants
 author: JamesPhilbin <jfphilbin@gmail.com>
 
 environment:

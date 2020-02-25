@@ -6,15 +6,19 @@
 //  Primary Author: Jim Philbin <jfphilbin@gmail.edu>
 //  See the AUTHORS file for other contributors.
 //
-library base;
+library constants;
 
-export 'package:constants/constants.dart';
+export 'package:charcode/ascii.dart';
 
-export 'src/dicom/character.dart';
-export 'src/dicom/constants.dart';
-export 'src/dicom/string.dart';
-export 'src/dicom/vr_base.dart';
-export 'src/dicom/vr_errors.dart';
-
+export 'src/date_time/constants.dart';
+export 'src/date_time/epoch.dart';
+export 'src/number/float.dart';
+export 'src/number/integer/constants.dart';
+export 'src/number/integer/decimal.dart';
+export 'src/number/integer/hexadecimal.dart';
+export 'src/number/integer/integer.dart';
+export 'src/number/num.dart';
+export 'src/string/ascii.dart';
+export 'src/string/string.dart';
 
 

@@ -6,7 +6,6 @@
 //  Primary Author: Jim Philbin <jfphilbin@gmail.edu>
 //  See the AUTHORS file for other contributors.
 //
-import 'package:charcode/ascii.dart';
 import 'package:constants/constants.dart';
 
 // Urgent: is this file used?

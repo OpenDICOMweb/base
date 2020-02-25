@@ -1,7 +1,7 @@
-name: constants
-description: Common constant values used by many ODW packages
-version: 0.8.0
-homepage: https://github.com/OpenDICOMweb/constants
+name: base
+description: Common DICOM constants and primitives used by the ODW SDK.
+version: 0.7.6
+homepage: https://github.com/OpenDICOMweb/base
 author: JamesPhilbin <jfphilbin@gmail.com>
 
 environment:
@@ -9,6 +9,10 @@ environment:
 
 dependencies:
   charcode: any
+  constants:
+    path: C:/odw/constants
+    version: ^0.8.0
+
 
 dev_dependencies:
   test: ^1.6.0

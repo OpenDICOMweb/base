@@ -10,15 +10,16 @@ library constants;
 
 export 'package:charcode/ascii.dart';
 
+export 'src/character/ascii.dart';
+export 'src/character/charset.dart';
 export 'src/date_time/constants.dart';
 export 'src/date_time/epoch.dart';
-export 'src/number/float.dart';
-export 'src/number/integer/constants.dart';
-export 'src/number/integer/decimal.dart';
-export 'src/number/integer/hexadecimal.dart';
-export 'src/number/integer/integer.dart';
-export 'src/number/num.dart';
-export 'src/string/ascii.dart';
-export 'src/string/string.dart';
+export 'src/integer/constants.dart';
+export 'src/string/decimal.dart';
+export 'src/string/float.dart';
+export 'src/string/hexadecimal.dart';
+export 'src/string/num.dart';
+
+//export 'src/string/string.dart';
 
 

@@ -1,5 +1,5 @@
-name: base
-description: Common DICOM constants and primitives used by the ODW SDK.
+name: constants
+description: Common (non-DICOM) constants and primitives used by the ODW SDK.
 version: 0.8.0
 homepage: https://github.com/OpenDICOMweb/base
 author: JamesPhilbin <jfphilbin@gmail.com>
@@ -9,10 +9,9 @@ environment:
 
 dependencies:
   charcode: any
-  constants:
-    path: C:/odw/constants
+  rng:
+    path: C:/odw/rng
     version: ^0.8.0
 
-
 dev_dependencies:
-  test: any
+  test: ^1.6.0

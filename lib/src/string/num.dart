@@ -1,0 +1,21 @@
+//  Copyright (c) 2016, 2017, 2018,
+//  Poplar Hill Informatics and the American College of Radiology
+//  All rights reserved.
+//  Use of this source code is governed by the open source license
+//  that can be found in the odw/LICENSE file.
+//  Primary Author: Jim Philbin <jfphilbin@gmail.edu>
+//  See the AUTHORS file for other contributors.
+//
+import 'package:constants/src/string/float.dart';
+import 'package:constants/src/string/decimal.dart';
+
+//Note: the following do NO error checking.
+
+/// Returns a [String] that approximately corresponds to [v],
+
+/// Returns a [String] that approximately corresponds to [v],
+String numToString(num v) {
+  assert(v is double || v is int);
+  return (v is double) ? floatToString(v) : dec32(v);
+}
+
